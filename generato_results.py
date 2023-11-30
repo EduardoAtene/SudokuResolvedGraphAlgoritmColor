@@ -75,7 +75,7 @@ def style_table(worksheet, start_col, end_col, start_row, end_row):
         
 # Carregar dados e calcular as medianas
 root_folder = "Output"
-num_folders = 1000
+num_folders = 100
 
 data = read_analysis_files(root_folder, num_folders)
 median_metrics = calculate_median_metrics(data)

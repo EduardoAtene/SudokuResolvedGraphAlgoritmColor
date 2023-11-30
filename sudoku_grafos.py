@@ -344,7 +344,7 @@ def main(file_number):
 
 
 if __name__ == '__main__':
-    num_files = 1000  # Altere conforme o número de GRAFOS que deseja gerar/testar
+    num_files = 100  # Altere conforme o número de GRAFOS que deseja gerar/testar
 
     for i in range(num_files):
         num_recursive_calls = 0

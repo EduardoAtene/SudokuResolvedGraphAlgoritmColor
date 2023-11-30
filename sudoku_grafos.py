@@ -304,6 +304,7 @@ def main(file_number):
         sudoku = generate()
         end_time_generator_sudoku = time.time()  # ínicio
         execution_time_algoritm_create_sudoku = end_time_generator_sudoku - start_time_generator_sudoku  # Calcula o tempo de execução do algoritmo de coloracao
+        output.write(f'Sudoku gerado:\n{print_sudoku(sudoku)}\n')
             
         # plot_interactive_graph(sudoku) # Gera a visualização do grafo de maneira interantiva
             
@@ -324,7 +325,6 @@ def main(file_number):
 
     # Escreve o tempo de execução no arquivo de saída
     with open(output_file, 'a') as output:
-        output.write(f'Sudoku gerado:\n{print_sudoku(sudoku)}\n')
         output.write(f'Sudoku Solucionado:\n{print_sudoku(sudoku)}\n')
         output.write(f'O Sudoku e valido? {"Sim" if check(sudoku) else "Não"}\n\n')
         output.write(f'Tempo de execucao do codigo: {execution_time_code} segundos\n')
@@ -344,7 +344,7 @@ def main(file_number):
 
 
 if __name__ == '__main__':
-    num_files = 100  # Altere conforme o número de arquivos que deseja gerar
+    num_files = 1000  # Altere conforme o número de GRAFOS que deseja gerar/testar
 
     for i in range(num_files):
         num_recursive_calls = 0
